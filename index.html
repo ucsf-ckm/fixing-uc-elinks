@@ -1467,8 +1467,7 @@ class="crossreflink">CrossRef</a> Enabled
             resultsState = 'visible';
             $(event.target).text('Hide Additional Results');
         } else {
-            selector.hide();
-            selector.first().show();
+            selector.not(':first').hide();
             resultsState = 'hidden';
             $(event.target).text('Show More Results');
         }
