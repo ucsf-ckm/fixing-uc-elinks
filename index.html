@@ -1474,7 +1474,8 @@ class="crossreflink">CrossRef</a> Enabled
         }
     }
 
-    $('#service_type_header_getFullTxt td div div div').append('<td><span class="clickable details">Details</span></td>').on('click', toggleDetails);
+    $('#service_type_header_getFullTxt td div div div').append('<td><span class="clickable details">Details</span></td>');
+    $('#service_type_header_getFullTxt td div div div .clickable').on('click', toggleDetails);
     $('#service_type_header_getFullTxt form').first().append('<div class="clickable results">Show More Results</div>');
     $('#service_type_header_getFullTxt form').first().find('div.clickable.results').on('click', toggleResults);
 
