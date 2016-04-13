@@ -1,0 +1,240 @@
+/* test searches:
+	
+ucsf multiple links:
+http://ucelinks.cdlib.org:8888/sfx_ucsf?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_enc=info:ofi/enc:UTF-8&ctx_ver=Z39.88-2004&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&rft.object_id=1000000000237899&rft.object_portfolio_id= 
+
+ucsf 4 multiple links:
+http://ucelinks.cdlib.org:8888/sfx_ucsf?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_enc=info:ofi/enc:UTF-8&ctx_ver=Z39.88-2004&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&rft.object_id=954925427238&rft.object_portfolio_id=
+
+another 4 linker:
+http://ucelinks.cdlib.org:8888/sfx_ucsf?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_enc=info:ofi/enc:UTF-8&ctx_ver=Z39.88-2004&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&rft.object_id=110981583600944&rft.object_portfolio_id=
+
+6 links!
+http://ucelinks.cdlib.org:8888/sfx_ucsf?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_enc=info:ofi/enc:UTF-8&ctx_ver=Z39.88-2004&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&rft.object_id=954925414917&rft.object_portfolio_id=
+
+
+ucsf multiple 'get it online from's:
+http://ucelinks.cdlib.org:8888/sfx_ucsf?url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&ctx_enc=info:ofi/enc:UTF-8&ctx_ver=Z39.88-2004&rfr_id=info:sid/sfxit.com:azlist&sfx.ignore_date_threshold=1&rft.object_id=1000000000436852&rft.object_portfolio_id=
+
+
+uc item not found NOTE THE SUBFOLDER IS sfx_local, NOT sfx_ucsf
+http://p8888-ucelinks.cdlib.org.ucsf.idm.oclc.org/sfx_local?sid=Entrez:PubMed&id=pmid:26987078
+
+*/
+
+/* GVSU examples:
+	
+multiple links:
+http://vq9xh3gm7u.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=Triple-negative+breast+cancer&rft.jtitle=The+New+England+journal+of+medicine&rft.au=Foulkes%2C+William+D&rft.au=Smith%2C+Ian+E&rft.au=Reis-Filho%2C+Jorge+S&rft.date=2010-11-11&rft.eissn=1533-4406&rft.volume=363&rft.issue=20&rft.spage=1938&rft_id=info:pmid/21067385&rft.externalDocID=21067385&paramdict=en-US	
+
+gvsu link not found:
+http://vq9xh3gm7u.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:journal&rft.genre=article&rft.atitle=External+Ear+infections+in+diabetics-+Challenges+in+management&rft.jtitle=Online+Journal+of+Otolaryngology&rft.au=Srinivas+Bhat+Vadisha&rft.au=P+Bhat+Shubha&rft.au=Rao+Harish&rft.au=Kumar+Bhandary+Satheesh&rft.date=2015-10-01&rft.pub=Otolaryngology+Online&rft.issn=2250-0359&rft.eissn=2250-0359&rft.volume=5&rft.issue=4&rft.spage=43&rft.externalDocID=3920930661&paramdict=en-US
+
+*/
+
+/* see also: http://quirksmode.org/css/selectors/ */
+
+/* TAB'S SUCCESSFUL TARGETED CLASSES */
+/* IMPORTANT: form[name=basicx] isn't a reliable selector because form naming (basic1, basic2) is consecutive regardless of parent =( */
+
+/* push away from UC-eLinks header */
+.popContainer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/* kill superfluous text like "Check the" before some links */
+.service {display:none;}
+
+/* UCSF Library colors */
+.target a {color:#007cbe;font-size:105%;}
+.target a:hover {color:#FBB632;}
+
+/* do we need table cells for spacing? give each section comfortable margins instead */
+td.rtl_padding {display:none;}
+#service_type_header_getHolding,
+#service_type_header_getDocumentDelivery,
+#service_type_header_getReference,
+#service_type_header_getWebService {
+    margin-bottom:2.5em;
+}
+
+/* hide 'Source:', replace with 'You are looking for' */
+.popContainer th {
+    display: none;
+}
+h2.objectSourceHeader:before {
+    content: "You are looking for: ";
+    font-weight: 800;
+    font-size: 120%;
+    display: block;
+    margin-bottom: 1%;
+    }
+
+/* hide 'Get it Online From', replace with 'Full Text Online' */
+#service_type_header_getFullTxt h4 {
+    display: none;
+}
+#service_type_header_getFullTxt form:before {
+    content: "Full Text Online:";
+    font-size:150%;
+    color:#052049;
+    font-weight:bold;
+    /*! float: left; */
+    /*! display: inline; */
+}
+/* add 'Full Text Online' to second full text link */
+#service_type_header_getFullTxt table tr:nth-child(n+2) form:before {
+/*     content: "Full Text Online:"; */
+    font-size:14px;
+    line-height:14px;
+/*     color:#052049; */
+/*     font-weight:bold; */
+    /*! float: left; */
+    /*! display: inline; */
+}
+
+/* full text section gets it's own margins, bottom border to separate */
+#service_type_header_getFullTxt {
+    margin-bottom:2.5em;
+    padding-bottom:1.5em;
+    border-bottom: 2px dotted #bbb;
+}
+/* hide full-text descriptions like "Available from ...." */
+/* JS toggle DETAILS button to show/hide */
+#service_type_header_getFullTxt form tr:nth-child(n+2) {
+  display: none;
+}
+
+#service_type_header_getFullTxt form tr:nth-child(n+2) td {
+  padding: 10px;
+  font-style: italic;
+}
+
+#service_type_header_getFullTxt form table {
+  margin-bottom: 20px;
+}
+
+#service_type_header_getFullTxt table tr:nth-child(n+2) form {
+  margin-left: 20px;
+}
+
+/* override sfxmenu.css line 33 to give the first full-text row a line-height of 35px */
+#service_type_header_getFullTxt tr#tr_1_basic1 {
+    line-height: 35px;
+    display: block;
+    /*! float: left;
+    /*! float: right; */
+}
+
+.serviceTarget {
+  background: none;
+}
+
+/* make first full-text link look like a button */
+#tr_1_basic1 .search .serviceTarget a {
+    background-color: #052049;
+    color: white !important;
+    padding: 5px 15px;
+    border-radius: 10px;
+    text-decoration:none;
+    font-weight:normal;
+    font-size: 130%;
+    display: inline-block;
+}
+#tr_1_basic1  .search .serviceTarget a:hover {
+    background-color: #FBB632;
+}
+
+/* hide additional full-text links ... there shouldn't be more than 6 but verify' */
+/* JS toggle SHOW [X] MORE RESULTS to show/hide */
+#service_type_header_getFullTxt form[name=basic2], #service_type_header_getFullTxt form[name=basic3], #service_type_header_getFullTxt form[name=basic4], #service_type_header_getFullTxt form[name=basic5], #service_type_header_getFullTxt form[name=basic6] {
+    display: none;
+}
+
+/* Style second full-text link  */
+#service_type_header_getFullTxt form[name=basic2] table {
+/*   margin-bottom: 20px; */
+	display:inline;
+	line-height:10px;
+}
+#tr_1_basic2 td {/* padding-bottom:5px; */}
+
+
+/* hide 'Find a Copy', replace with 'Search for ....' */
+#service_type_header_getHolding h4 {
+    display:none;
+}
+#service_type_header_getHolding:before {
+    content: "Search for other formats:";
+    font-size:130%;
+    color:#333;
+    font-weight:normal;
+}
+
+/* hide 'Request It', replace with 'Not available online ... ' */
+#service_type_header_getDocumentDelivery h4 {
+  display: none;
+}
+#service_type_header_getDocumentDelivery:before {
+  content: "Not available online?";
+  font-size:130%;
+  color:#333;
+}
+
+/* hide 'Add Citation to a Bibliography', replace with 'Need the citation?' */
+#service_type_header_getReference h4 {
+  display:none;
+}
+#service_type_header_getReference:before {
+  content: "Cite this reference:";
+  font-size:130%;
+  color:#333;
+}
+
+/* hide 'Get Help', replace with 'Found a problem? Need Help?' */
+#service_type_header_getWebService h4 {
+  display:none;
+}
+#service_type_header_getWebService:before {
+  content: "Need help? Found a problem?";
+  font-size:130%;
+  color:#333;
+}
+
+/*  hide 'Report a problem with UC-eLinks' to limit 'help' actions for UCSF patrons to UCSF Library
+	hide CDL Privacy Policy link because honestly.
+	Depends on this section always having 3 links */
+/* #service_type_header_getWebService table tr:nth-last-child(2n) {display:none;}*/
+#service_type_header_getWebService table tr {display:none;}
+#service_type_header_getWebService table tr:first-child {display:inline;}
+
+/* Styles for JS toggles */
+.clickable {
+  text-decoration: underline;
+  margin-left: .50rem;
+  font-weight:normal;
+}
+
+.clickable:hover {
+  color: #FBB632;
+  cursor: pointer;
+}
+
+.clickable.results {
+  font-size: 130%;
+  margin: 15px 0 10px 5px;
+  color:#007cbe;
+}
+
+.details-content {
+  padding: 10px;
+  background: #eee;
+}
+
+/* force 2nd full text link details to the left */
+form[name=basic2] .details-content {
+	display:inline-block;
+	margin-top:5px;
+	margin-left:-120px;
+}

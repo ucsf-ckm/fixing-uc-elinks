@@ -1,0 +1,74 @@
+/*-------------bX CSS Document-------------*/
+#bXMenuContainer img         {border:0;}
+#bXMenuContainer p           { margin: 0; padding: 0;}
+#bXMenuContainer A:link, #bXMenuContainer A:visited {color:blue;text-decoration:underline;}
+#bXMenuContainer A:hover 		  {color:#990000;}
+
+#bXMenuContainer .no_wrap          { white-space:nowrap;}
+#bXMenuContainer .hide 			  {display:none;}
+#bXMenuContainer .alignLeft  {float:left;}
+#bXMenuContainer .alignRight {float:right}
+
+#bXMenuForm form {text-align:center;}
+
+#bXMenuContainer{ text-align:left; width:95%; height:auto; background-color:#FFFFFF; border:1px solid #b8b8b8; margin-left:auto; margin-right:auto; margin-top:0.5em; margin-bottom:0.5em; }
+
+#bXMenuContainer table { width:100%;  font-size:10pt; }
+#bXMenuContainer table td {  vertical-align:middle; padding-top:0.5em; font-size:10pt; width: 3%}
+#bXMenuContainer table caption { background-image:url(../../img/bx/bx_bg_title.png); background-repeat:repeat-x; height:25px; text-indent:5px; line-height:170%; border-bottom:1px solid #b8b8b8; padding-right:2px;padding-top:1px;color:#676c71; font-weight:bold;width:100%;}
+
+#bXMenuContainer table td.checkbox { width:5%; text-align:center;}
+#bXMenuContainer table td.checkbox label{ display:none}
+#bXMenuContainer table td.recordNum { width:3%;}
+#bXMenuContainer table td.citation {width:80%;}
+#bXMenuContainer table td.fulltext img { margin-right: 10px }
+#bXMenuContainer table td.sfx img { margin-right: 10px }
+#bXMenuContainer table td.thumbsUp img { margin-right: 10px }
+#bXMenuContainer table td.thumbsDown img { margin-right: 10px }
+
+
+#bXMenuContainer table tr.moreRecords { display:table-row } 
+#bXMenuContainer table tr.hideRecords { display:none } 
+
+/*bX footer*/
+#bxMenuFooter { width:100%; font-size:10pt; margin-top:0.5em; margin-bottom:1em; display: inline-block  } 
+#bxMenuFooter div.alignLeft { width:15%; vertical-align:bottom;  } 
+#bxMenuFooter div.alignLeft a{ line-height:150%; font-weight:bold; margin-left:0.5em } 
+#bxMenuFooter div.alignLeft.viewLess {display:block}
+#bxMenuFooter div.alignRight { width:70%;vertical-align: text-bottom; text-align:right;margin-right:1em} 
+#bxMenuFooter div.alignRight span { margin-right:0.5em; cursor:pointer;text-decoration:underline;color:#117779;}
+#bxMenuFooter span.toggleMoreLess {margin-left:0.5em;font-weight:bold;cursor:pointer;color:#117779;text-decoration:underline; vertical-align:text-bottom;}
+
+/*Save Citations*/
+#bXMenuContainer div.alignRight select{ font-size:80%;} 
+#bxMenuFooter div.alignRight label { color:#6a6b6d; font-weight:bold}
+
+/*Citations*/
+
+span.recommendations-JournalName
+{
+  /*font-style: italic;*/
+}
+
+span.recommendations-BookName
+{
+  /*font-style: italic;*/
+}
+
+span.recommendations-JournalArticleName
+{
+/*  color:#990000;
+  text-decoration: underline;*/
+}
+
+span.recommendations-BookArticleName
+{
+/*  color:#990000;
+  text-decoration: underline;*/
+}
+
+a.recommendations-AccessibleLink
+{
+/*  color:#0000FF;
+  text-decoration:underline;*/
+} 

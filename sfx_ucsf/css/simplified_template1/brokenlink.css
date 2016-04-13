@@ -1,0 +1,37 @@
+.ExlBrokenLinkPopUp, .ExlRightBrokenLinkPopUp {
+z-index: 1000;
+width: 350px;
+top: 30%;
+left: 41%;
+display: none;
+position: fixed;
+background-color: #d0d0d0;
+font-size: small;
+padding-left:10px;
+padding-right:10px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.ExlRightBrokenLinkPopUp{ 
+direction: rtl;
+}
+
+.ExlRightDivBL { width: 100%; float:right; }
+.ExlInputDivBL { width: 100%; min-height:24px; }
+.ExlCloseBL { float:right; text-decoration: none; }
+.ExlLabelBL, .ExlRightLabelBL, .ExlLeftLabelBL { width:45%; }
+.ExlRightLabelBL { padding-right:2em; float:right; }
+.ExlLeftLabelBL { padding-left:2em; float:left; }
+.ExlInputBL { width:45%; max-width:50%; }
+.ExlErrorDivBL { height:35px; display:none; }
+.ExlErrorLabelBL { font-size: x-small; color:red; }
+.ExlRightReportDiv { float:right; font-weight:bold;}
+.ExlLeftReportDiv { float:left; }
+.ExlReportBL { text-decoration: none; }
+
+div:focus { outline: none; }
+
+fieldset {padding:10px; margin-top:10px; margin-bottom:10px;}
+legend {margin: 5px; padding: 5px; }
+

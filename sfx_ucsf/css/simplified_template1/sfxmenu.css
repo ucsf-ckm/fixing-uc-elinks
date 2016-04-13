@@ -1,0 +1,138 @@
+/*-------------DPS CSS Document-------------*/
+* { margin:0; padding:0;}
+html {height:100%}
+body        { background-color: #FFFFFF; color:#000000; margin: 0px; padding: 0px;
+              font-family:helvetica,verdana,arial;font-size:100%;}
+  
+img         {border:0;}
+p           { margin: 0; padding: 0;}
+table       { width: 100%;}
+A:link, A:visited {color:#990000;text-decoration:underline;}
+A:hover 		  {color:#990000}
+.no_wrap          { white-space:nowrap;}
+.hide 			  {display:none;}
+.invisible 			  { visibility:hidden}
+.center 		  {text-align:center;}
+.alignLeft  {float:left;}
+.alignRight {float:right}
+.textAlignLeft  { text-align:left}
+.textAlignRight { text-align:right}
+.bold{font-weight:bold;}
+.inactive { color:#999999}
+.paddingLeft{ padding-left:1em}
+.paddingRight{ padding-right:1em}
+.paddingTop{ padding-top:1em}
+.paddingBottom{ padding-bottom:1em}
+.marginLeft{ margin-left:1em}
+.marginRight{ margin-right:1em}
+.marginTop{ margin-top:1em}
+.marginBottom{ margin-bottom:1em}
+
+.Form {
+    font-size: 12px;
+    color:#000000;
+    font-family:TAHOMA,ARIAL,VERDANA;
+    width:40px;
+}
+
+.submitLink {
+   color: #990000;
+   background-color: transparent;
+   text-decoration: underline;
+   border: none;
+   cursor: pointer;
+   cursor: hand;
+}
+
+.Popup {
+		POSITION:ABSOLUTE;
+		VISIBILITY:HIDDEN;
+		LEFT:0; 
+		TOP:0; 
+		Z-INDEX:1000;
+		BACKGROUND: #EBEBEB;
+		}
+		
+/*header*/
+
+.header_table {  
+	border-bottom:1px #990000 solid; 
+	color:#990000;
+	font-size:14px;
+	width:100%;
+	height:35px;
+	background-repeat: repeat-x;
+}
+
+.select_cell{
+	background-repeat: repeat-x;			
+	white-space:nowrap;
+	vertical-align: middle;
+	color:white;
+	padding-right:2px;
+}
+
+/*container*/
+.popContainer {background-color:#FFFFFF; width:auto; text-align:left; font-weight:normal; margin-top:0px; height:auto; font-size:80%;}
+
+
+/*headline*/
+.headline{padding-left:10px; background-color:#FFFFFF; padding-bottom:10px; padding-top:10px; margin:0px}
+.headline table th{ width:10px; white-space:nowrap; color:#000000; font-weight:bold; padding-bottom:0px; padding-top:0px; padding-right:3px}
+.headline table td{color:#000000; padding-bottom:0px; padding-top:0px; padding-right:3px}
+
+.servicesContainer {background-color:white}
+
+/*search*/
+.search {padding-top:0px; padding-right:5px; padding-bottom:0px;margin:0px}
+/*table 01*/
+.serviceTarget {width:auto;margin:0px;padding-top:10px;background-color: orange;/* border-radius: 10px; */}
+.searchTable input {width:30px; padding-left:1px; margin:0px}
+.searchTable select {width:100%;}
+.serviceTarget input.button {width:auto; border:1px solid #D67B7B; color:#222299; font-weight:bold; font-family:Verdana; height:20px; padding:0px 2px; margin-left:2px; cursor:pointer;}
+
+.bullet {display:inline;padding-right:5px;padding-bottom:0px}
+.bullet img {display:inline;vertical-align:bottom;margin-bottom:0;}
+.service a {display:inline;text-align:left; color:#222299; font-wwight:normal;  padding-top:15px;}
+.target a {display:inline;text-align:left; padding:0px;padding-top:5px; color:#222299; text-align:left; }
+.service {display:inline;text-align:left; font-weight:bold; color:#222299;font-size:90%;  padding-top:15px;}
+.target {display:inline;text-align:left;padding:0px;padding-top:5px; color:#222299; font-size:90%; font-weight:bold; text-align:left; }
+
+.targetDisplayerContainer {margin:0px; padding-top:5px;}
+.targetDisplayerContainer input {width:40px; padding-left:1px; margin:0px;}
+.targetDisplayerContainer td { font-size:80%;}
+.targetDisplayerContainer input.button {width:auto; border:1px solid #D67B7B; color:#222299; font-weight:bold; font-family:Verdana; height:20px; padding:0px 2px; margin-left:2px; cursor:pointer;}
+
+/* extra containers */
+.commentsContainer {padding-top:0px; padding-left:40px; padding-right:5px; padding-bottom:0px;margin:0px}
+.availabilityContainer {padding-top:0px; padding-left:100px; font-weight:bold;padding-right:5px; padding-bottom:0px;margin:0px}
+
+/*bottom*/
+.popBottom{border-bottom:1px #990000 solid; color:#990000; padding-left:10px; margin:0px; margin-left:10px; padding-right:0px; font-size:80%; height:23px}
+.popBottom div.bgImg{background-color:#ECE6E6; padding:0px; padding-right:0px; margin:0px; height:100%;}
+.popBottom div.bgImg img{line-height:23px;  padding-top:10px}
+.popBottom div.bgImg a img{padding-left:4px}
+.popBottom div.alignRight div.text {height:18px; float:left; padding-top:4px; padding-left:4px;}
+.popBottom div.alignRight div.text A:link, A:visited{color:#990000}
+
+.popBottom_left{border-bottom:1px #990000 solid; color:#990000; padding-right:10px; margin:0px; margin-right:10px; margin-top:10px; padding-left:0px; font-size:80%; height:23px}
+.popBottom_left div.bgImg{background-color:#ECE6E6; padding:0px; padding-right:5px; margin:0px; height:100%;}
+.popBottom_left div.bgImg img{line-height:23px;  padding-top:10px}
+.popBottom_left div.bgImg a img{padding-left:4px}
+.popBottom_left div.alignLeft div.text {height:18px; float:left; padding-top:4px; padding-left:4px;}
+.popBottom_left div.alignLeft div.text A:link, A:visited{color:#990000}
+
+.objectSourceHeader {
+	font-size: 14px;
+	display: inline;
+	font-weight: normal;
+}
+
+.absoluteNoDisplay {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
