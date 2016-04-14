@@ -39,8 +39,8 @@ http://vq9xh3gm7u.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%
 
 /* push away from UC-eLinks header */
 .popContainer {
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 /* kill superfluous text like "Check the" before some links */
@@ -68,7 +68,7 @@ h2.objectSourceHeader:before {
     font-weight: 800;
     font-size: 120%;
     display: block;
-    margin-bottom: 1%;
+    margin-bottom: .75em;
     }
 
 /* hide 'Get it Online From', replace with 'Full Text Online' */
