@@ -45,3 +45,6 @@ $('#tr_1_advanced2 a').text('Get the Citation');
 // Get rid of spacer that forces details right. We want them left!
 $('#service_type_header_getFullTxt form table tr td:first-child').hide();
 $('#service_type_header_getFullTxt table tr:nth-child(n+2) form .search').css('padding-bottom', '0');
+
+// For the prototype only...disable links
+$('a').on('click', function () {alert('Sorry! This is a prototype only. Links (other than Details and Show/Hide Results) are disabled.'); return false;});
