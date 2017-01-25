@@ -1,0 +1,88 @@
+/* UCSF CSS Ideas v2 */
+
+/* hide UC-elinks square icon until it's removed from the code */
+.Exl_vertical_university_logo {display:none;}
+
+/* change sidebar background color to create a visual relationship with UC-eLinks button */
+.Exl_hidden_sidebar {
+	background-color:#e0e0e0;
+	background-color:#fdc240;
+	background-color:#ffd57a;
+}
+
+/* Override hide/show chevrons */
+.Exl_help {
+	width:auto;
+	margin-right:5px;
+	font-size:12px;
+	}
+.Exl_hide_sidebar, .Exl_show_sidebar {
+	width: 20px;
+	height: 20px;
+	float: left;
+	padding: 2px 2px 0 0;
+	text-align: right;
+	cursor: pointer;
+	color: #999;
+	/* new ucsf overrides */
+	width:auto;
+	float:right;
+	text-decoration:none;
+}
+.Exl_icon_chevron_sign_right,
+.Exl_icon_chevron_sign_left {
+	background-image:none !important;
+	width:auto;
+	height:auto;
+}
+.Exl_icon_chevron_sign_right::before,
+.Exl_icon_chevron_sign_left::before {
+	float:left;
+	margin-left:-15px;
+}
+.Exl_icon_chevron_sign_right::before {
+	content:"HIDE";
+	background-color:#44707B;
+	border:2px solid #65A7B8;
+	color:#fff;
+	padding:5px;
+	margin-top:15px;
+	}
+.Exl_icon_chevron_sign_left::before {
+	content:"";
+	margin-right:6px;
+	margin-top:5px;
+	background-image:url(https://ucsf.box.com/shared/static/v02f9l2k9bl8d84gny0nnj9po0pb6xk2.png);
+	width:34px;
+	height:234px;
+}
+
+/* remove height restriction from article title banner */
+.Exl_title_banner {
+	max-height:initial;
+}
+
+/* article title shouldn't look like a link; re-establish H2/H3 visual hierarchy */
+.Exl_title_banner h2 {
+	color:#5f6161;
+	font-size:17px;
+	line-height:22px;
+	}
+
+/* add some space for increased readability */
+.Exl_title_banner h2,
+.Exl_services h3 {
+	margin-bottom:2px;
+}
+.Exl_services ul {
+	display:inline-block;
+	margin-bottom:15px;
+}
+.Exl_services li {
+	margin-bottom:8px;
+}
+
+.Exl_services button {
+	margin: 4px 0;
+}
+
